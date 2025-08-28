@@ -32,7 +32,7 @@ body{
     right: 30px;
     left: auto;
     top: 20px;
-    position: absolute;   
+    position: fixed;   
     font-size: 25px;
     z-index: 5;
     cursor: pointer;
@@ -57,13 +57,14 @@ body{
 
 
 nav.menu {
-    position: absolute;
+    position: fixed;
     margin-top: 20px;
     top: 30px;
     right: 0px;
     left: auto;
     border-color: rgb(21, 0, 48);
-
+    z-index: 5;
+background-color: rgb(255, 255, 255);
     box-shadow: -1px 1px 1px black;
     padding: 0px;
 
@@ -104,3 +105,10 @@ nav.menu li {
         background-color:#0c0d0e;
         color: #effffe;
         }
+
+    .botoes {
+        width: 100px;
+        height: auto;
+        background-color: #edfafd;
+        cursor: pointer;
+    }

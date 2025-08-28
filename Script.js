@@ -33,3 +33,21 @@ body.classList.toggle('dark');
     }
 
 });
+
+
+ // Scroll suave para a seção alvo ao clicar no botão 
+
+
+    document.getElementById('scrollButton0').addEventListener('click', function () {
+      document.getElementById('lp').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    document.getElementById('scrollButton1').addEventListener('click', function () {
+      document.getElementById('Site').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    
+    document.getElementById('scrollButton2').addEventListener('click', function () {
+      document.getElementById('bd').scrollIntoView({ behavior: 'smooth' });
+    });
