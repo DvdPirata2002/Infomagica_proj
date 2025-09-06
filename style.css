@@ -68,6 +68,8 @@ background-color: rgb(255, 255, 255);
     box-shadow: -1px 1px 1px black;
     padding: 0px;
 
+    border-radius: 10%;
+    transition: all 0.2s ease;
     height: 0px;
     width: 0px;
     overflow: hidden;
@@ -101,14 +103,31 @@ nav.menu li {
 
 
 
+        .secaoSumida {
+            display: none;
+        }
+        .secaoSumida.selecionada {
+            display: block;
+        }
+
         body.dark {
         background-color:#0c0d0e;
         color: #effffe;
         }
 
     .botoes {
-        width: 100px;
-        height: auto;
+        width: 120px;
+        height: 60px;
         background-color: #edfafd;
+        border: 2px solid #000e22;
+        font-size: 20px;
         cursor: pointer;
+        border-radius: 10%;
     }
+
+    .botoes:hover {
+        background-color: #000e22;
+        color: #edfafd;
+        transition: all 0.1s ease;
+    }
+

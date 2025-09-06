@@ -12,6 +12,7 @@ window.onload = function() {
     } else {
         body.classList.remove('dark');
     }
+    mostraSecao('index'); 
 };
 
 // expande o menu
@@ -37,17 +38,23 @@ body.classList.toggle('dark');
 
  // Scroll suave para a seção alvo ao clicar no botão 
 
-
-    document.getElementById('scrollButton0').addEventListener('click', function () {
-      document.getElementById('lp').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('Button0').addEventListener('click', function () {
+      mostraSecao('lp');
     });
 
 
-    document.getElementById('scrollButton1').addEventListener('click', function () {
-      document.getElementById('Site').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('Button1').addEventListener('click', function () {
+      mostraSecao('Site');
     });
 
     
-    document.getElementById('scrollButton2').addEventListener('click', function () {
-      document.getElementById('bd').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('Button2').addEventListener('click', function () {
+      mostraSecao('so');
     });
+
+
+    // qual seçao aparece
+       function mostraSecao(sId) {
+        document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
+        document.getElementById(sId).classList.add('selecionada');
+    }
