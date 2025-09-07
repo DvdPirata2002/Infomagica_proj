@@ -12,7 +12,7 @@ function buscar() {
 
     for (let i = 0; i < secoes.length; i++) {
        
-        let titulo = secoes[i].querySelector('h1');
+        let titulo = secoes[i].querySelector('.pesquisa');
         let textoTitulo = titulo ? titulo.textContent.toLowerCase() : "";
 
         if (input === "") {
