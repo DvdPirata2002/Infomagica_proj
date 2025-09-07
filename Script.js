@@ -5,24 +5,35 @@ var body = document.body;
 var drk = document.getElementById('drkToggle')
 
 // função de busca/pesquisa
-
 function buscar() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let secoes = document.getElementsByClassName('secaoSumida');
+    let primeiroEncontrado = null; 
 
     for (let i = 0; i < secoes.length; i++) {
-       
-        let titulo = secoes[i].querySelector('.pesquisa');
-        let textoTitulo = titulo ? titulo.textContent.toLowerCase() : "";
-
+        let pesquisas = secoes[i].getElementsByClassName('pesquisa');
+        let encontrou = false;
+        for (let j = 0; j < pesquisas.length; j++) {
+            let texto = pesquisas[j].textContent.toLowerCase();
+            if (texto.includes(input)) {
+                encontrou = true;
+                break;
+            }
+        }
         if (input === "") {
             secoes[i].classList.remove('selecionada');
-        } else if (textoTitulo.includes(input)) {
+        } else if (encontrou) {
             secoes[i].classList.add('selecionada');
-            
+        if (!primeiroEncontrado) {
+                primeiroEncontrado = secoes[i];
+            }
         } else {
             secoes[i].classList.remove('selecionada');
         }
+    }
+
+    if (primeiroEncontrado) {
+        primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 }
 
