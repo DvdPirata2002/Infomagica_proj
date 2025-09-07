@@ -92,6 +92,10 @@ body.classList.toggle('dark');
       mostraSecao('md');
     });
 
+    document.getElementById('Button5').addEventListener('click', function () {
+      mostraSecao('mm');
+    }
+
 
     // qual seçao aparece
        function mostraSecao(sId) {
