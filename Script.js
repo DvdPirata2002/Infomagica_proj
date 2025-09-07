@@ -11,16 +11,17 @@ function buscar() {
     let secoes = document.getElementsByClassName('secaoSumida');
 
     for (let i = 0; i < secoes.length; i++) {
-        // Procura o h1 dentro da seção
+       
         let titulo = secoes[i].querySelector('h1');
         let textoTitulo = titulo ? titulo.textContent.toLowerCase() : "";
 
         if (input === "") {
-            secoes[i].style.display = "none";
+            secoes[i].classList.remove('selecionada');
         } else if (textoTitulo.includes(input)) {
-            secoes[i].style.display = "block";
+            secoes[i].classList.add('selecionada');
+            
         } else {
-            secoes[i].style.display = "none";
+            secoes[i].classList.remove('selecionada');
         }
     }
 }
@@ -57,7 +58,7 @@ body.classList.toggle('dark');
 });
 
 
- // Scroll suave para a seção alvo ao clicar no botão 
+ // mostrar seções
 
     document.getElementById('Button0').addEventListener('click', function () {
       mostraSecao('lp');
@@ -65,7 +66,7 @@ body.classList.toggle('dark');
 
 
     document.getElementById('Button1').addEventListener('click', function () {
-      mostraSecao('Site');
+      mostraSecao('site');
     });
 
     
