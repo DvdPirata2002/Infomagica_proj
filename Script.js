@@ -94,7 +94,7 @@ body.classList.toggle('dark');
 
     document.getElementById('Button5').addEventListener('click', function () {
       mostraSecao('mm');
-    }
+    });
 
 
     // qual seçao aparece
