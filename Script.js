@@ -85,6 +85,14 @@ body.classList.toggle('dark');
       mostraSecao('so');
     });
 
+    document.getElementById('Button4').addEventListener('click', function () {
+      mostraSecao('fw');
+    });
+
+    document.getElementById('Button5').addEventListener('click', function () {
+      mostraSecao('mm');
+    });
+
 
     // qual seçao aparece
        function mostraSecao(sId) {
