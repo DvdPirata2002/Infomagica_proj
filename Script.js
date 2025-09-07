@@ -8,20 +8,19 @@ var drk = document.getElementById('drkToggle')
 
 function buscar() {
     let input = document.getElementById('searchInput').value.toLowerCase();
-    let secao = document.getElementsByClassName('secaoSumida');
+    let secoes = document.getElementsByClassName('secaoSumida');
 
-    if (input === "") {
-        // Esconde todas as seções quando o campo está vazio
-        for (let i = 0; i < secao.length; i++) {
-            secao[i].style.display = "none";
-        }
-    } else {
-        for (let i = 0; i < secao.length; i++) {
-         if(!secao[i].innerHTML.toLowerCase().includes(input)) {
-                secao[i].style.display = "none";
-            }else {
-               secao[i].style.display = "list-item";
-            }
+    for (let i = 0; i < secoes.length; i++) {
+        // Procura o h1 dentro da seção
+        let titulo = secoes[i].querySelector('h1');
+        let textoTitulo = titulo ? titulo.textContent.toLowerCase() : "";
+
+        if (input === "") {
+            secoes[i].style.display = "none";
+        } else if (textoTitulo.includes(input)) {
+            secoes[i].style.display = "block";
+        } else {
+            secoes[i].style.display = "none";
         }
     }
 }
