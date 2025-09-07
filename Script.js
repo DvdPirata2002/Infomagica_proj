@@ -33,9 +33,12 @@ function buscar() {
     }
 
     if (primeiroEncontrado) {
+       setTimeout(function() {
         primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50); 
     }
 }
+
 
 // Verifica o estado do modo escuro ao carregar a página
 
