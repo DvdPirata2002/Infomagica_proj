@@ -580,6 +580,23 @@ própria para empresas.
 
 
 
+<section id="md" class="secaoSumida">
+    <header>
+      <h1>Modelagem de dados</h1>
+    </header>
+    <main>
+      
+<p><b>Modelagem de dados</b> é o processo de organizar e estruturar as informações que serão armazenadas e usadas
+ por um sistema, como um banco de dados ou um aplicativo. Imagine que você vai organizar uma biblioteca.
+ Para saber onde estão os livros, você precisa de um sistema para catalogá-los. Assim, você decide criar uma
+ ficha para cada livro com informações como título, autor, ano de publicação e gênero. Na modelagem de dados,
+ fazemos algo parecido, só que com dados.
+ <br>
+  Nós definimos o que será guardado (como "título", "autor"), como esses
+ dados se relacionam (por exemplo, um autor pode ter vários livros) e como vão ser organizados para facilitar o
+ acesso e o uso.
+</p>
+<br>
 
 <p>No entanto, nada disso seria útil se não pudéssemos compartilhar o site com outras pessoas.
  É aqui que entram os servidores web, que são computadores dedicados ao armazenamento e à disponibilização
@@ -589,78 +606,170 @@ própria para empresas.
 
 
 
-
-
-
-
-
-
-
- <!-- ----------------------- lista ----------------------- -->
-  <p class="listagem">
- Com a evolução da tecnologia, a web não só mudou a forma como consumimos informações, mas também criou inúmeras
- oportunidades de emprego.</p>
-
-<h2 class="listagem" style="margin-top: -10px;">Algumas das principais áreas incluem:</h2>
+<!-- ----------------------- Lista ----------------------- -->
 
 <ul style="list-style-type: decimal;">
-<li>
-    <p class="listagem">
-       <b> Desenvolvimento Web:</b> Profissionais que criam e mantêm sites. Eles podem ser desenvolvedores front-end<br>
-        (focam na parte visual e interativa do site) ou back-end (trabalham na lógica e banco de dados por trás das cenas).
-    </p>
-</li>
-<li>
-    
-    <p class="listagem">
-        <b>Design de UX/UI:</b> Especialistas que se concentram na experiência do usuário (UX) e na interface do usuário (UI).<br>
- Eles asseguram que os sites sejam intuitivos e agradáveis de usar.
-</p>
-</li>
-<li>
+  <li>
 <p class="listagem">
-    <b>Marketing Digital:</b> Com a web, o marketing ganhou novas dimensões. Profissionais dessa área trabalham<br>
-    com SEO (otimização para motores de busca), marketing de conteúdo e mídias sociais para aumentar a visibilidade<br>
-    de marcas online.
+ <b> Modelo Conceitual:</b> Este é o nível mais abstrato da modelagem de dados. O objetivo do modelo conceitual é
+ entender quais são os dados importantes para o negócio e como esses dados se relacionam. Ele não envolve
+ detalhes técnicos de implementação, mas sim uma visão geral do sistema.
 </p>
-</li>
-<li>
+<ul style="list-style-type: disc;">
+  <li>
+    <p class="listagem"><b>Objetivo:</b> Descrever o que é relevante para o sistema de forma independente da tecnologia.</p>
+  </li>
+  <li>
+    <p class="listagem"><b>Entidades e Relacionamentos:</b> O modelo conceitual define as entidades (objetos ou conceitos relevantes,
+      como "Cliente", "Produto", "Pedido") e as associações (relacionamentos entre essas entidades, como "um
+      cliente faz vários pedidos").</p>
+  </li>
+  <li>
+    <p class="listagem"><b>Ferramentas:</b> Uma técnica muito usada nessa fase é o Modelo Entidade-Relacionamento (MER), criado por Peter
+      Chen, onde são usadas representações gráficas com retângulos (entidades), losangos (relacionamentos) e elipses
+      (atributos).</p>
+  </li>
+  <li>
+    <p class="listagem"> <b>Exemplo:</b> Imagine uma loja online. No modelo conceitual, você identificaria entidades como "Cliente",
+      "Produto" e "Pedido", e definiria que "um cliente pode fazer vários pedidos" e "um pedido contém vários
+      produtos".</p>
+  </li>
+</ul>
+<br><br>
+  </li>
+
+
+
+  <li>
+
 <p class="listagem">
-<b>E-commerce:</b> O comércio eletrônico transformou a forma como as pessoas compram. Profissionais nessa área trabalham<br>
- com plataformas de venda online, logística, atendimento ao cliente e muito mais.
+  <b>Modelo Lógico:</b> O modelo lógico é um refinamento do modelo conceitual. Aqui, começamos a pensar nos detalhes
+ de implementação, embora ainda não em termos de tecnologia específica. Ele é uma ponte entre o modelo conceitual
+ e o modelo físico, definindo de maneira mais detalhada as estruturas de dados e suas interações.
 </p>
-</li>
-<li>
-<p class="listagem">
- <b>Desenvolvimento de Aplicativos:</b> Muitas empresas criam aplicativos que complementam seus serviços online.<br>
- Desenvolvedores de aplicativos trabalham em plataformas móveis e desktop para trazer a experiência da web para<br>
- diferentes dispositivos.
+
+<ul style="list-style-type: disc;">
+  <li>
+<p class="listagem"><b>Objetivo:</b> Definir a estrutura dos dados de maneira formal e independente do banco de dados ou sistema
+   específico.
+  </p>
+  </li>
+  <li>
+    <p class="listagem"><b>Tabelas e Atributos:</b>No modelo lógico, as entidades do modelo conceitual geralmente se transformam
+ em tabelas e os atributos das entidades tornam-se colunas dessas tabelas.
 </p>
-</li>
-<li>
-<p class="listagem">
- <b>Análise de Dados:</b> Com a vastidão de informações disponíveis na web, a análise de dados se tornou crucial.<br>
- Profissionais analisam dados de usuários e comportamento online para ajudar as empresas a tomar decisões informadas.
+  </li>
+  <li>
+    <p class="listagem"><b>Normalização:</b>    Nesta fase, aplicam-se técnicas de normalização para garantir que o banco de dados seja 
+eficiente e evite redundâncias e anomalias de atualização (por exemplo, dividir uma tabela grande em tabelas
+ menores que estejam relacionadas por chaves estrangeiras).
 </p>
-</li>
+  </li>
+  <li>
+    <p class="listagem"><b>Exemplo:</b>    No caso da loja online, o modelo lógico definiria tabelas como "Clientes", "Pedidos"
+ e "Produtos", especificando os atributos de cada tabela (como nome e endereço para "Clientes" e preço
+ e descrição para "Produtos"). Definiria também as chaves primárias (por exemplo, "id_cliente") e as chaves
+ estrangeiras (como "id_cliente" em "Pedidos" para relacionar um pedido a um cliente).
+</p>    <br><br>
+  </li>
 </ul>
 
+  </li>
 
 
-<p>A web representa um ambiente dinâmico e em constante evolução. O conhecimento dos seus fundamentos e as novas<br>
- possibilidades que ela oferece em termos de empregos e carreiras fazem dela uma área fascinante e repleta de<br>
- oportunidades. À medida que mais aspectos da nossa vida se trasladam para o mundo digital, as habilidades<br>
- relacionadas à web continuarão a ser cada vez mais valorizadas.
+
+
+  <li>
+
+<p class="listagem"><b>Modelo Físico:</b> O modelo físico é a fase em que os detalhes técnicos de implementação entram em cena.
+ Aqui, a modelagem se concentra em como os dados serão realmente armazenados e acessados no sistema de
+ banco de dados.</p>
+<ul>
+  <li>
+<p class="listagem"><b>Objetivo:</b> Traduzir o modelo lógico em uma implementação específica, levando em conta as restrições
+ e particularidades do sistema de banco de dados utilizado.</p>
+  </li>
+  <li>
+<p class="listagem"><b> Tecnologia Específica:</b>  Neste nível, é levado em consideração o sistema de gerenciamento de banco de
+ dados (SGBD) escolhido (como MySQL, Oracle, SQL Server) e a forma como os dados serão armazenados
+ fisicamente no disco.</p>
+  </li>
+  <li>
+<p class="listagem"><b>  Desempenho e Otimização:</b> O modelo físico leva em conta questões como índices, particionamento
+ de tabelas, esquemas de replicação e técnicas de otimização para melhorar o desempenho do banco de dados.</p>
+  </li>
+  <li>
+<p class="listagem"><b>Exemplo:</b>Na loja online, o modelo físico especificaria o tipo de dados de cada coluna (por exemplo,
+ "VARCHAR(255)" para o nome do cliente e "DECIMAL(10,2)" para o preço do produto) e definiria índices
+ sobre a coluna "id_cliente" para acelerar buscas relacionadas aos clientes</p>
+  </li>
+</ul>
+  </li>
+</ul>
+<br><br>
+
+
+
+
+<h2 class="sstitulo">Casos de Uso:</h2>
+<p> <b>Aplicações empresariais tradicionais:</b> Sistemas de <b>ERP</b> (Planejamento de Recursos Empresariais), <b>CRM </b>(Gestão de Relacionamento com o Cliente) 
+  e sistemas financeiros.
+<br>
+ <b>Transações com alta consistência:</b> Bancos de dados relacionais são preferidos em cenários que exigem
+ integridade transacional <b>ACID</b> (Atomicidade, Consistência, Isolamento e Durabilidade). <br>
+ Exemplo: Em um sistema
+ de gestão de vendas, haveria uma tabela "Clientes", uma tabela "Produtos" e uma tabela "Pedidos". A tabela
+ "Pedidos" poderia ter uma chave estrangeira para "Clientes" e "Produtos", indicando que um cliente fez um
+ pedido de determinados produtos.
 </p>
 
-    <main>
-
-<h1></h1>
-<p >  </p> 
 
 
 
-      </section>
+
+<p>Os casos de uso são descrições detalhadas de como um sistema ou aplicação deve funcionar
+ sob diferentes circunstâncias. Eles servem para documentar as interações entre o usuário (ou outro sistema)
+ e o sistema em desenvolvimento, ajudando a garantir que o sistema atenda às necessidades e expectativas dos
+ usuários. Um caso de uso é composto por uma série de passos que detalham como um ator interage com o sistema
+ para realizar uma tarefa específica.
+</p>
+
+<br>
+
+
+<!-- ----------------------- Lista ----------------------- -->
+
+
+
+<ul style="list-style-type: decimal;">
+  <li><p class="listagem"><b>Ator:</b> Quem ou o que está interagindo com o sistema. Um ator pode ser um usuário humano, outro sistema
+ ou qualquer entidade externa que interage com o sistema. Exemplo: Um cliente, um funcionário ou um sistema
+ externo.</p></li>
+  <li><p class="listagem"><b>Objetivo:</b>O que o ator quer alcançar ao interagir com o sistema. O objetivo é a tarefa ou processo que está
+ sendo descrito pelo caso de uso. Exemplo: "Fazer uma compra online", "Gerar um relatório financeiro",
+ "Enviar uma mensagem".</p></li>
+  <li><p class="listagem"><b>Cenário Principal (Fluxo Principal):</b> Descreve o caminho "feliz" ou o cenário ideal em que o ator consegue 
+realizar a tarefa sem problemas. Exemplo: Um cliente acessa um site de e-commerce, escolhe produtos,
+ adiciona ao carrinho, faz o pagamento, e a compra é confirmada.</p></li>
+  <li><p class="listagem"><b>Fluxos Alternativos (ou Exceções): </b> Detalham o que acontece quando algo dá errado ou se uma situação
+ inesperada ocorre. Esses fluxos cobrem variações do processo principal. Exemplo: O pagamento falha,
+ o produto está fora de estoque, o cliente decide cancelar a compra no meio do processo.</p></li>
+  <li><p class="listagem"><b>Pré-condições:</b> São as condições que precisam ser verdadeiras antes do caso de uso começar. Exemplo:
+ O cliente deve estar autenticado no sistema para fazer uma compra.</p></li>
+  <li><p class="listagem"><b>Pós-condições:</b>São as condições que estarão verdadeiras após o caso de uso ser concluído com
+ sucesso. Exemplo: O pedido do cliente foi criado e registrado no banco de dados, e uma confirmação
+ foi enviada por e-mail.</p></li>
+  <li><p class="listagem"><b>Regras de Negócio:</b> São restrições ou requisitos específicos que devem ser observados durante a execução
+ do caso de uso. <br>
+ Exemplo: "O sistema deve permitir apenas uma tentativa de pagamento por cartão de
+ crédito a cada 10 minutos."</p></li>
+</ul>
+
+    </main>
+  </section>
+
+
+
 
   <section id="bd" class="secaoSumida"> Seção alvo
 
