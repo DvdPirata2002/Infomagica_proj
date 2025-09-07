@@ -4,6 +4,28 @@ var menu = document.querySelector('.menu')
 var body = document.body;
 var drk = document.getElementById('drkToggle')
 
+// função de busca/pesquisa
+
+function buscar() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let secao = document.getElementsByClassName('secaoSumida');
+
+    if (input === "") {
+        // Esconde todas as seções quando o campo está vazio
+        for (let i = 0; i < secao.length; i++) {
+            secao[i].style.display = "none";
+        }
+    } else {
+        for (let i = 0; i < secao.length; i++) {
+         if(!secao[i].innerHTML.toLowerCase().includes(input)) {
+                secao[i].style.display = "none";
+            }else {
+               secao[i].style.display = "list-item";
+            }
+        }
+    }
+}
+
 // Verifica o estado do modo escuro ao carregar a página
 
 window.onload = function() {
