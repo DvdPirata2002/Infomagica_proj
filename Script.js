@@ -86,11 +86,7 @@ body.classList.toggle('dark');
     });
 
     document.getElementById('Button4').addEventListener('click', function () {
-      mostraSecao('fw');
-    });
-
-    document.getElementById('Button5').addEventListener('click', function () {
-      mostraSecao('mm');
+      mostraSecao('md');
     });
 
 
