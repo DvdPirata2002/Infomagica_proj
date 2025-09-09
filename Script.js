@@ -10,12 +10,21 @@ function buscar() {
     let secoes = document.getElementsByClassName('secaoSumida');
     let primeiroEncontrado = null; 
 
+    document.querySelectorAll('.topico').forEach(topico => {
+        topico.classList.remove('ativo');
+    });
+
     for (let i = 0; i < secoes.length; i++) {
         let pesquisas = secoes[i].getElementsByClassName('pesquisa');
         let encontrou = false;
+        let topicoParaAbrir = null;
+
         for (let j = 0; j < pesquisas.length; j++) {
             let texto = pesquisas[j].textContent.toLowerCase();
             if (texto.includes(input)) {
+                encontrou = true; 
+                topicoParaAbrir = pesquisas[j].closest('.topico');
+                break;
                 encontrou = true;
                 if (!primeiroEncontrado) {
                     primeiroEncontrado = pesquisas[j];
@@ -26,12 +35,24 @@ function buscar() {
             secoes[i].classList.remove('selecionada');
         } else if (encontrou) {
             secoes[i].classList.add('selecionada');
+            if (!primeiroEncontrado) {
+                primeiroEncontrado = secoes[i];
+            }
+            if (topicoParaAbrir) {
+                topicoParaAbrir.classList.add('ativo');
+                setTimeout(function() {
+                    topicoParaAbrir.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 50);
+            }
         } else {
             secoes[i].classList.remove('selecionada');
         }
     }
 
     if (primeiroEncontrado) {
+        setTimeout(function() {
+            primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50); 
        setTimeout(function() {
         primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 50); 
@@ -98,11 +119,12 @@ menu.classList.toggle('dark');
 
 
     // qual seçao aparece
-       function mostraSecao(sId) {
-        document.getElementById('searchInput').value = "";
-        document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
-        document.getElementById(sId).classList.add('selecionada');
-    }
+function mostraSecao(sId) {
+    document.getElementById('searchInput').value = "";
+    document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
+    document.getElementById(sId).classList.add('selecionada');
+    document.querySelectorAll('.topico').forEach(topico => topico.classList.remove('ativo'));
+}
 
     // lançe que faz os topicos abrirem e fecharem
     document.querySelectorAll('.topico-cabecalho').forEach(cabecalho => {
