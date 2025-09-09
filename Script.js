@@ -99,6 +99,16 @@ body.classList.toggle('dark');
 
     // qual seçao aparece
        function mostraSecao(sId) {
+        document.getElementById('searchInput').value = "";
         document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
         document.getElementById(sId).classList.add('selecionada');
     }
+
+    // lançe que faz os topicos abrirem e fecharem
+    document.querySelectorAll('.topico-cabecalho').forEach(cabecalho => {
+        cabecalho.addEventListener('click', () => {
+    
+        const topico = cabecalho.closest('.topico');
+        topico.classList.toggle('ativo');
+  });
+});
