@@ -113,6 +113,14 @@ menu.classList.toggle('dark');
       mostraSecao('mm');
     });
 
+    document.getElementById('Button6').addEventListener('click', function () {
+      mostraSecao('bd');
+    });
+
+    document.getElementById('Button7').addEventListener('click', function () {
+      mostraSecao('RC');
+    });
+
 
     // qual seçao aparece
 function mostraSecao(sId) {
