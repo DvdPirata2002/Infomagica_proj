@@ -17,16 +17,15 @@ function buscar() {
             let texto = pesquisas[j].textContent.toLowerCase();
             if (texto.includes(input)) {
                 encontrou = true;
-                break;
+                if (!primeiroEncontrado) {
+                    primeiroEncontrado = pesquisas[j];
+                }
             }
         }
         if (input === "") {
             secoes[i].classList.remove('selecionada');
         } else if (encontrou) {
             secoes[i].classList.add('selecionada');
-        if (!primeiroEncontrado) {
-                primeiroEncontrado = secoes[i];
-            }
         } else {
             secoes[i].classList.remove('selecionada');
         }
@@ -34,7 +33,7 @@ function buscar() {
 
     if (primeiroEncontrado) {
        setTimeout(function() {
-        primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "start" });
+        primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 50); 
     }
 }

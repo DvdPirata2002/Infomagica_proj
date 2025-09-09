@@ -192,6 +192,21 @@ top: 10px;
     position : fixed;
 }
 
+.textosumido {
+    font-size: 1px;       
+    color: transparent;   
+    user-select: none;    
+    pointer-events: none;   
+    width: 0;
+    height: 0;
+    display: inline-block;
+    line-height: 0;
+}
+
+
+
+
+
 .topico {
   border: 1px solid #ccc;
   padding: 15px;
