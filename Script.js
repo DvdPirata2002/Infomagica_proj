@@ -45,6 +45,7 @@ function buscar() {
 window.onload = function() {
     if (localStorage.getItem('modoEscuro') === 'true') {
         body.classList.add('dark');
+        menu.classList.add('dark');
     } else {
         body.classList.remove('dark');
     }
@@ -62,6 +63,7 @@ menu.classList.toggle('grande')
 
 drk.addEventListener('click', function(){
 body.classList.toggle('dark');
+menu.classList.toggle('dark');
 
     if (body.classList.contains('dark')) {
         localStorage.setItem('modoEscuro', 'true');
@@ -83,7 +85,6 @@ body.classList.toggle('dark');
       mostraSecao('site');
     });
 
-    
     document.getElementById('Button2').addEventListener('click', function () {
       mostraSecao('so');
     });

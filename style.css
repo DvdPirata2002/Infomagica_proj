@@ -13,10 +13,11 @@ body{
     background-color: #edfafd;
     color: #000e22;
     transition: background 0.2s linear;
+
 }
 
     main {
-        max-width: 1000px; 
+        max-width: 900px; 
         margin: 60px auto; 
         padding: 20px; 
         text-align: left; 
@@ -34,12 +35,12 @@ body{
     top: 20px;
     position: fixed;   
     font-size: 25px;
-    z-index: 5;
+    z-index: 6;
     cursor: pointer;
 
 }
 .menu.grande {
-    height: auto;
+    height: 660px;
     width: 200px;
     padding: 10px;
     border: 1px solid;
@@ -59,18 +60,19 @@ body{
 nav.menu {
     position: fixed;
     margin-top: 20px;
-    top: 30px;
-    right: 0px;
+    top: -20px;
+    right: -3px;
     left: auto;
+    height: 680px;
     border-color: rgb(21, 0, 48);
     z-index: 5;
 background-color: rgb(255, 255, 255);
     box-shadow: -1px 1px 1px black;
     padding: 0px;
 
-    border-radius: 10%;
+    border-radius: 5%;
     transition: all 0.2s ease;
-    height: 0px;
+
     width: 0px;
     overflow: hidden;
 }
@@ -114,6 +116,27 @@ nav.menu li {
         background-color:#0c0d0e;
         color: #effffe;
         }
+
+        nav.menu.dark {
+        background-color: #1a1a1a;
+    border-color: #ffffff;
+    box-shadow: -1px 1px 5px #000;
+}
+
+    .dark .botoes {
+        background-color: #141416;
+        color: #effffe;
+        border: 2px solid #ffffff;
+    }
+
+    .dark .botoes:hover {
+     background-color: #ffffff;
+        color: #070707;
+        transition: all 0.1s ease;
+        
+    }
+
+
 
     .botoes {
         width: 120px;
