@@ -24,7 +24,6 @@ function buscar() {
             if (texto.includes(input)) {
                 encontrou = true; 
                 topicoParaAbrir = pesquisas[j].closest('.topico');
-                break;
                 encontrou = true;
                 if (!primeiroEncontrado) {
                     primeiroEncontrado = pesquisas[j];
@@ -41,7 +40,7 @@ function buscar() {
             if (topicoParaAbrir) {
                 topicoParaAbrir.classList.add('ativo');
                 setTimeout(function() {
-                    topicoParaAbrir.scrollIntoView({ behavior: "smooth", block: "start" });
+                    topicoParaAbrir.scrollIntoView({ behavior: "smooth", block: "center" });
                 }, 50);
             }
         } else {
@@ -50,9 +49,6 @@ function buscar() {
     }
 
     if (primeiroEncontrado) {
-        setTimeout(function() {
-            primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 50); 
        setTimeout(function() {
         primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 50); 
