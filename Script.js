@@ -121,6 +121,10 @@ menu.classList.toggle('dark');
       mostraSecao('RC');
     });
 
+    document.getElementById('Logo').addEventListener('click', function () {
+    mostraSecao('index');
+    });
+
 
     // qual seçao aparece
 function mostraSecao(sId) {
