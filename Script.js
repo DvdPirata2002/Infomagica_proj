@@ -138,3 +138,14 @@ function mostraSecao(sId) {
         topico.classList.toggle('ativo');
   });
 });
+
+
+
+
+
+
+
+
+//-------------------------PARTE DO QUIZ------------------------------
+
+
