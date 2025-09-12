@@ -224,3 +224,17 @@ top: 10px;
 .topico.ativo .conteudo {
   display: block; 
 }
+
+.fundoMenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+ height: 80px;
+ width: 100%;
+    background-color: #fdfdfda8;
+backdrop-filter: blur(5px);  
+    z-index: 4; 
+}
+.dark .fundoMenu{
+          background-color:#0c0d0ebd;
+}
