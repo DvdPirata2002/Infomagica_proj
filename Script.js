@@ -151,5 +151,58 @@ function mostraSecao(sId) {
 
 
 //-------------------------PARTE DO QUIZ------------------------------
+let numeroSecao=0
 
 
+
+
+    document.getElementById('1').addEventListener('click', function () {
+numeroSecao = numeroSecao + 1
+mostraPergunta(numeroSecao);
+
+
+    });
+
+
+    document.getElementById('2').addEventListener('click', function () {
+numeroSecao = numeroSecao + 1
+mostraPergunta(numeroSecao);
+
+
+    });
+
+    
+    document.getElementById('3').addEventListener('click', function () {
+numeroSecao = numeroSecao + 1
+mostraPergunta(numeroSecao);
+
+
+    });
+
+    
+    document.getElementById('4').addEventListener('click', function () {
+numeroSecao = numeroSecao + 1
+mostraPergunta(numeroSecao);
+
+
+    });
+
+    
+    document.getElementById('5').addEventListener('click', function () {
+numeroSecao = numeroSecao + 1
+mostraPergunta(numeroSecao);
+
+
+    });
+
+
+
+
+
+
+
+function mostraPergunta(sId) {
+    document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
+    document.getElementById(sId).classList.add('selecionada');
+
+}
