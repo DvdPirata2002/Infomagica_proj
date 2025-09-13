@@ -203,6 +203,6 @@ mostraPergunta(numeroSecao);
 
 function mostraPergunta(sId) {
     document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
-    document.getElementById(sId).classList.add('selecionada');
+    document.getElementById("s"+sId).classList.add('selecionada');
 
 }
