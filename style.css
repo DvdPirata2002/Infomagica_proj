@@ -215,7 +215,7 @@ max-width: 450px;
     padding: 8px 16px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    width: 100%;
+    width: 97%;
     transition: background 0.2s;
 }
 
@@ -257,6 +257,10 @@ body.dark #gaveta-seção,
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 5px;
+}
+
+#Logo {
+    cursor: pointer;
 }
 
 .topico {
