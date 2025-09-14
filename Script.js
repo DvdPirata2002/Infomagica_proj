@@ -65,7 +65,10 @@ window.onload = function() {
     } else {
         body.classList.remove('dark');
     }
-    mostraSecao('index'); 
+ 
+    if (document.getElementById('index')) {
+        mostraSecao('index');
+    }
 };
 
 // expande o menu
@@ -157,50 +160,74 @@ function mostraSecao(sId) {
 
 
 
+
 //-------------------------PARTE DO QUIZ------------------------------
-let numeroSecao=0
 
+const pontuacao = {
+    s0: {
+        1: { felicidade: 2, velhice: 0 },
+        2: { felicidade: 1, velhice: 0 },
+        3: { felicidade: 0, velhice: 0 },
+        4: { felicidade: -1, velhice: 1 },
+        5: { felicidade: -2, velhice: 2 }
+    },
+    s1: {
+        1: { felicidade: 1, velhice: 2 },
+        2: { felicidade: 0, velhice: 1 },
+        3: { felicidade: 0, velhice: 0 },
+        4: { felicidade: -1, velhice: 1 },
+        5: { felicidade: -2, velhice: 2 }
+    },
+    s2: {
+        1: { felicidade: 0, velhice: 1 },
+        2: { felicidade: 1, velhice: 0 },
+        3: { felicidade: 0, velhice: 0 },
+        4: { felicidade: -1, velhice: 1 },
+        5: { felicidade: -2, velhice: 2 }
+    },
+    s3: {
+        1: { felicidade: 2, velhice: 1 },
+        2: { felicidade: 1, velhice: 0 },
+        3: { felicidade: 0, velhice: 0 },
+        4: { felicidade: -1, velhice: 1 },
+        5: { felicidade: -2, velhice: 2 }
+    }
+    // Adicione mais seções conforme necessário
+};
 
+(function(){
+    // Só executa se houver perguntas do quiz na página
+    const secoesQuiz = document.querySelectorAll('.secaoSumida');
+    if (!secoesQuiz.length) return;
 
+    let resultado = { felicidade: 0, velhice: 0 };
 
-    document.getElementById('1').addEventListener('click', function () {
-numeroSecao = numeroSecao + 1
-mostraPergunta(numeroSecao);
+    secoesQuiz.forEach((secao, idx) => {
+        secao.querySelectorAll('.resposta').forEach(botao => {
+            botao.onclick = function () {
+                const secaoId = secao.id;
+                const botaoId = this.id;
 
+                // Soma a pontuação
+                if (pontuacao[secaoId] && pontuacao[secaoId][botaoId]) {
+                    resultado.felicidade += pontuacao[secaoId][botaoId].felicidade;
+                    resultado.velhice += pontuacao[secaoId][botaoId].velhice;
+                }
 
+                // Esconde a seção atual
+                secao.classList.remove('selecionada');
+
+                // Mostra a próxima seção, se existir
+                if (secoesQuiz[idx + 1]) {
+                    secoesQuiz[idx + 1].classList.add('selecionada');
+                } else {
+                    // Fim do quiz: mostre o resultado
+                    alert(`Quiz finalizado!\nFelicidade: ${resultado.felicidade}\nVelhice: ${resultado.velhice}`);
+                }
+            };
+        });
     });
-
-
-    document.getElementById('2').addEventListener('click', function () {
-numeroSecao = numeroSecao + 1
-mostraPergunta(numeroSecao);
-
-
-    });
-
-    
-    document.getElementById('3').addEventListener('click', function () {
-numeroSecao = numeroSecao + 1
-mostraPergunta(numeroSecao);
-
-
-    });
-
-    
-    document.getElementById('4').addEventListener('click', function () {
-numeroSecao = numeroSecao + 1
-mostraPergunta(numeroSecao);
-
-
-    });
-
-    
-    document.getElementById('5').addEventListener('click', function () {
-numeroSecao = numeroSecao + 1
-mostraPergunta(numeroSecao);
-
-
-    });
+})();
 
 
 
@@ -208,8 +235,7 @@ mostraPergunta(numeroSecao);
 
 
 
-function mostraPergunta(sId) {
-    document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
-    document.getElementById("s1").classList.add('selecionada');
 
-}
+
+
+
