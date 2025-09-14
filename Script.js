@@ -78,15 +78,22 @@ menu.classList.toggle('grande')
 // faz o modo escuro funcionar
 
 drk.addEventListener('click', function(){
-body.classList.toggle('dark');
-menu.classList.toggle('dark');
+    body.classList.toggle('dark');
+    menu.classList.toggle('dark');
+
+    document.querySelectorAll('.icone').forEach(function(img) {
+        if (body.classList.contains('dark')) {
+            img.src = img.src.replace(/(IMG\/)([^.]+)\.png/, '$1$2-B.png');
+        } else {
+            img.src = img.src.replace(/(IMG\/)([^.]+)-B\.png/, '$1$2.png');
+        }
+    });
 
     if (body.classList.contains('dark')) {
         localStorage.setItem('modoEscuro', 'true');
     } else {
         localStorage.setItem('modoEscuro', 'false');
     }
-
 });
 
 

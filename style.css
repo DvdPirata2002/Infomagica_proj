@@ -205,13 +205,13 @@ max-width: 450px;
     line-height: 0;
 }
 
-#gaveta-seção {
+#gaveta-secao {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
-    background: #e5e8ee;      /* cinza claro no modo padrão */
+    background: #e5e8ee;     
     padding: 8px 16px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -219,16 +219,16 @@ max-width: 450px;
     transition: background 0.2s;
 }
 
-body.dark #gaveta-seção,
-.dark #gaveta-seção {
-    background: #232a36;      /* mais escuro no modo dark */
+body.dark #gaveta-secao,
+.dark #gaveta-secao {
+    background: #232a36;   
 }
 
-#gaveta-seção .botoes {
+#gaveta-secao .botoes {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-width: 120px;       /* largura mínima para cada botão */
+    min-width: 120px;    
     padding: 6px 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     cursor: pointer;
@@ -236,18 +236,18 @@ body.dark #gaveta-seção,
     margin: 0;
 }
 
-#gaveta-seção .botoes:hover {
+#gaveta-secao .botoes:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-#gaveta-seção .icone {
+#gaveta-secao .icone {
     width: 32px;
     height: 32px;
     margin-right: 10px;
     object-fit: contain;
 }
 
-#gaveta-seção .nome-materia {
+#gaveta-secao .nome-materia {
     flex: 1;
     text-align: left;
     font-weight: 600;
