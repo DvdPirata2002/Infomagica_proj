@@ -405,23 +405,6 @@ backdrop-filter: blur(5px);
     justify-content: flex-start;
 }
 
-    .botoes, #gaveta-secao .botoes {
-    width: 80vw;
-    max-width: 400px;
-    min-width: 0;
-    height: auto;
-    min-height: 56px;
-    font-size: 1rem;
-    border-radius: 12px;
-    padding: 10px 16px;
-    margin: 0 auto 10px auto;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: break-word;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    }
 
     .botaoconteudo {
         flex-direction: row;
