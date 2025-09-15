@@ -159,11 +159,4 @@ function mostraSecao(sId) {
 //-------------------------PARTE DO QUIZ------------------------------
 
 
-    document.getElementById('www').addEventListener('click', function () {
-    mostrapergunta('bd');
-    });
 
-function mostrapergunta(sId) {
-    document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
-    document.getElementById(sId).classList.add('selecionada');
-}

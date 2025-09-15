@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" src="style.css" href="style.css">
+    <title>Infomagica Project</title>
+</head>
+<body>
+
+<div class="fundoMenu">
+   <div  class="expande">
+        <i class="bi bi-list" id="xburguer"></i>
+    </div>
+        <nav class="menu">
+
+            <ul>
+                 <li>
+                <a href="Index.html">
+                    <button id="Buttonv" class="botoes">
+                        <div class="botaoconteudo">
+                            <span class="icone">
+                                <i class="bi bi-arrow-return-left"></i>
+                            </span>
+                            <span class="textobotao">Voltar</span>
+                        </div>
+                    </button>
+                </a>
+            </li>
+                <li class="im" id="drkToggle" style="cursor: pointer;">
+                    <button id="Button3" class="botoes"> 
+                        <div class="botaoconteudo">    
+                            <span class="icone" >
+                                <i class="bi bi-moon"></i>
+                            </span>
+                            <span class="textobotao">Aparência</span>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <input class="searchInput menu" id="searchInput" type="text" placeholder="Pesquisar..." onkeyup="buscar()">
+                </li>
+            </ul>
+            
+        </nav> 
+ <header>
+    <div id="Logo">
+      <img src="Imagens/infomagica_logo.png" 
+      style="width: 300px;">
+
+    </div>
+    </header>
+</div>
+
+
+    <section style="margin-top: 200px;" id="pergunta1" class="secaoSumida selecionada"> 
+
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            
+
+
+     
+    </section>
+
+
+
+
+  <section style="margin-top: 200px;" id="pergunta2" class="secaoSumida"> 
+        <main>
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    a
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+            <button class="botoes" onclick="mostraSecao('pergunta2')">
+                <span class="textobotao">
+                    Banco <br> de <br>Dados
+                </span>
+            </button>
+
+
+        </main>    
+    </section>
+
+
+
+
+    
+
+</main>
+
+
+
+
+<footer>
+    <p>Boa Tarde!!</p> 
+    <p>
+        Dvdpirata e D'Ryan fizeram este site. (por incrivel que pareça)
+
+    </p>
+    </footer>
+
+
+<script type="text/javascript" src="Script.js"></script>
+</body>
+</html>
