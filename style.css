@@ -387,7 +387,7 @@ backdrop-filter: blur(5px);
         gap: 10px;
     }
     .botoes, #gaveta-secao .botoes {
-        width: 95vw;
+        width: 90vw;
         min-width: 0;
         height: 60px;
         font-size: 13px;
