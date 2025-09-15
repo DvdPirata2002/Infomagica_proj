@@ -284,6 +284,18 @@ body.dark #gaveta-secao,
     cursor: pointer;
 }
 
+
+.imagemtexto{
+    width: 180px;
+    height: auto;
+float: inline-end;
+margin-right: 100px;
+border: none;
+position: absolute;
+z-index: -1;
+
+} 
+
 .topico {
   border: 1px solid #ccc;
   padding: 15px;
