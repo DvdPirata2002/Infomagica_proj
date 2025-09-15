@@ -388,22 +388,22 @@ backdrop-filter: blur(5px);
     }
     
     .botoes, #gaveta-secao .botoes {
-        width: 90%; /* Use a percentage for better responsiveness */
-        max-width: 400px; /* Prevents them from being too wide on tablets */
-        height: auto; /* Let the height be determined by the content */
-        min-height: 56px; /* Keep this to ensure a minimum height */
-        font-size: 1rem;
-        border-radius: 12px;
-        padding: 10px 16px;
-        margin: 0 auto 10px auto;
-        box-sizing: border-box;
-        white-space: normal;
-        word-break: break-word;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+    width: 80vw;
+    max-width: 400px;
+    min-width: 0;
+    height: auto;
+    min-height: 56px;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin: 0 auto 10px auto;
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     }
-}
 
     .botaoconteudo {
         flex-direction: row;
