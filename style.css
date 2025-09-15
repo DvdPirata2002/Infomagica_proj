@@ -326,3 +326,100 @@ backdrop-filter: blur(5px);
           background-color:#0c0d0ebd;
 }
 
+
+@media (max-width: 700px) {
+    body, main {
+        padding: 0 2vw;
+        font-size: 15px;
+    }
+    .fundoMenu {
+        height: 60px;
+        min-height: 60px;
+        padding: 0 5px;
+    }
+    #Logo h1 {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+    .searchInput {
+        width: 90vw;
+        left: 5vw;
+        right: auto;
+        top: 65px;
+        position: absolute;
+        font-size: 15px;
+    }
+    nav.menu {
+        width: 0;
+        min-width: 0;
+        max-width: 90vw;
+        left: auto;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        border-radius: 0 0 10px 10px;
+        margin-top: 0;
+        box-shadow: -2px 2px 8px #00000044;
+    }
+    nav.menu.grande {
+        width: 80vw;
+        min-width: 180px;
+        max-width: 95vw;
+        height: 100vh;
+        padding: 10px 0;
+    }
+    nav.menu ul {
+        margin-top: 30px;
+        gap: 10px;
+    }
+    .botoes, #gaveta-secao .botoes {
+        width: 95vw;
+        min-width: 0;
+        max-width: 99vw;
+        height: 48px;
+        font-size: 13px;
+        border-radius: 12px;
+        padding: 4px 8px;
+    }
+    .botaoconteudo {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .icone {
+        font-size: 1.5rem;
+        margin-right: 6px;
+    }
+    #gaveta-secao {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 6px 2vw;
+        width: 99vw;
+        margin-top: 65px;
+        border-radius: 10px;
+    }
+    #gaveta-secao .nome-materia {
+        font-size: 0.98rem;
+        padding-left: 3px;
+    }
+    .donocoluna {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .Coluna1, .Coluna2 {
+        margin: 0;
+        max-width: 100%;
+    }
+    .imagemtexto {
+        max-width: 98vw;
+        height: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: static !important;
+        display: block;
+        margin: 10px auto;
+    }
+    .topico {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
