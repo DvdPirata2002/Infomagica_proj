@@ -386,25 +386,24 @@ backdrop-filter: blur(5px);
         margin-top: 30px;
         gap: 10px;
     }
-
-    nav.menu .botoes {
-    width: 90vw;
-    max-width: 340px;
-    min-width: 0;
-    min-height: 60px;
-    height: auto;
-    font-size: 1.08rem;
-    border-radius: 14px;
-    padding: 12px 18px;
-    margin: 0 auto 12px auto;
-    box-sizing: border-box;
-    white-space: normal;
-    word-break: break-word;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    
+    .botoes, #gaveta-secao .botoes {
+        width: 90%; /* Use a percentage for better responsiveness */
+        max-width: 400px; /* Prevents them from being too wide on tablets */
+        height: auto; /* Let the height be determined by the content */
+        min-height: 56px; /* Keep this to ensure a minimum height */
+        font-size: 1rem;
+        border-radius: 12px;
+        padding: 10px 16px;
+        margin: 0 auto 10px auto;
+        box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
-
 
     .botaoconteudo {
         flex-direction: row;
