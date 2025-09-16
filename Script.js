@@ -181,7 +181,7 @@ drk.addEventListener('click', function(){
     });
 
     document.getElementById('Button7').addEventListener('click', function () {
-      mostraSecao('RC');
+      mostraSecao('rc');
     });
 
     document.getElementById('Logo').addEventListener('click', function () {
@@ -228,13 +228,14 @@ function pontuacaodoquiz(pid, rid) {
         case "pergunta1":
             switch (rid) {
                 case "1":
-alert("clicou no 1 da pergunta 1");
+alert("clicou no 2 da pergunta 1");
                     break;
                 case "2":
 alert("clicou no 2 da pergunta 1");
                     break;
 
                 case "3":
+                    alert("clicou no 2 da pergunta 1");
                     break;
 
                 case "4":
