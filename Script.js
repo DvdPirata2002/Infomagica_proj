@@ -189,10 +189,15 @@ drk.addEventListener('click', function(){
     });
 
 
-    // qual seçao aparece
+
 function mostraSecao(sId) {
-    document.getElementById('searchInput').value = "";
-    document.getElementById('searchInput2').value = "";
+
+    if (document.getElementById('searchInput')) {
+        document.getElementById('searchInput').value = "";
+    }
+    if (document.getElementById('searchInput2')) {
+        document.getElementById('searchInput2').value = "";
+    }
     document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
     document.getElementById(sId).classList.add('selecionada');
     document.querySelectorAll('.topico').forEach(topico => topico.classList.remove('ativo'));
@@ -213,136 +218,39 @@ function mostraSecao(sId) {
 
 
 //-------------------------PARTE DO QUIZ------------------------------
+let java = 0;
+let python = 0;
+let javascript = 0;
+let c = 0;
+let html = 0;
+let css = 0;
 
 function pontuacaodoquiz(pid, rid) {
-
-    java = 0;
-    python = 0;
-    javascript = 0;
-    c = 0;
-    html = 0;
-    css = 0;
-
- switch (pid) {
-
-
-
+    switch (pid) {
         case "pergunta1":
             switch (rid) {
                 case "1":
-alert("clicou no 2 da pergunta 1");
+                    alert("clicou no 1 da pergunta 1");
+                    java++;
                     break;
                 case "2":
-alert("clicou no 2 da pergunta 1");
-                    break;
-
-                case "3":
                     alert("clicou no 2 da pergunta 1");
+                    python++;
                     break;
-
-                case "4":
-                    break;
-
-
-                case "5":
-                    break;
-            }
-            break;
-
-
-
-        case "pergunta2":
-            switch (rid) {
-                case "1":
-
-                    break;
-                case "2":
-
-                    break;
-
                 case "3":
+                    alert("clicou no 3 da pergunta 1");
+                    javascript++;
                     break;
-
                 case "4":
+                    alert("clicou no 4 da pergunta 1");
+                    c++;
                     break;
-
-
                 case "5":
+                    alert("clicou no 5 da pergunta 1");
+                    html++;
                     break;
             }
             break;
-
-
-
-
-        case "pergunta3":
-            switch (rid) {
-                case "1":
-
-                    break;
-                case "2":
-
-                    break;
-
-                case "3":
-                    break;
-
-                case "4":
-                    break;
-
-
-                case "5":
-                    break;
-            }
-            break;
-
-
-
-
-        case "pergunta4":
-            switch (rid) {
-                case "1":
-
-                    break;
-                case "2":
-
-                    break;
-
-                case "3":
-                    break;
-
-                case "4":
-                    break;
-
-
-                case "5":
-                    break;
-            }
-            break;
-
-
-
-
-        case "pergunta5":
-            switch (rid) {
-                case "1":
-
-                    break;
-                case "2":
-
-                    break;
-
-                case "3":
-                    break;
-
-                case "4":
-                    break;
-
-
-                case "5":
-                    break;
-            }
-            break;
+        // ... repita para as outras perguntas
     }
 }
-
