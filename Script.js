@@ -221,14 +221,53 @@ function mostraSecao(sId) {
 let java = 0;
 let python = 0;
 let javascript = 0;
+let kotlin = 0;
 let c = 0;
-let html = 0;
-let css = 0;
 
 function pontuacaodoquiz(pid, rid) {
     switch (pid) {
         case "pergunta1":
             switch (rid) {
+                case "1":
+                    java=java + 2;
+                    C = C + 3;
+                    break;
+                case "2":
+                    javascript++;java++;
+                    break;
+                case "3":
+                    javascript = javascript + 2;
+                    python++;
+                    break;
+                case "4":
+                    python=python + 2;
+                    break;
+                case "5":
+                    kotlin=kotlin + 2;
+                    break;
+            }
+            break;
+        case "pergunta2":
+             switch (rid) {
+                case "1":
+                    javascript=javascript + 2;
+                    break;
+                case "2":
+                    java++;
+                    break;
+                case "3":
+                    java=java + 2; kotlin++;
+                    break;
+                case "4":
+                    kotlin=kotlin + 2; python=python + 2;
+                    break;
+                case "5":
+                    c=c + 2; python++;
+                    break;
+            }
+            break;
+        case "pergunta3":
+               switch (rid) {
                 case "1":
                     alert("clicou no 1 da pergunta 1");
                     java++;
@@ -250,7 +289,7 @@ function pontuacaodoquiz(pid, rid) {
                     html++;
                     break;
             }
-            break;
-        // ... repita para as outras perguntas
+
+
     }
 }
