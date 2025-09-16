@@ -56,82 +56,106 @@
     </header>
 </div>
 <main>
-<main></main>
+
+
+
     <section style="margin-top: 200px;" id="pergunta1" class="secaoSumida selecionada"> 
-        <button id="1" class="botoes" onclick="mostraSecao('pergunta2')">
-            <span class="textobotao">Concordo <br> Totalmente</span>
+        <button id="1" class="botoes" onclick="mostraSecao('pergunta2'); pontuacaodoquiz('pergunta1','1');">
+            <span class="textobotao">Concordo  Totalmente</span>
         </button>
-        <button id="2" class="botoes" onclick="mostraSecao('pergunta2')">
-            <span class="textobotao">Concordo <br> Parcialmente</span>
+        <button id="2" class="botoes" onclick="mostraSecao('pergunta2'); pontuacaodoquiz('pergunta1','2')">
+            <span class="textobotao">Concordo  Parcialmente</span>
         </button>
-        <button id="3" class="botoes" onclick="mostraSecao('pergunta2')">
+        <button id="3" class="botoes" onclick="mostraSecao('pergunta2'); pontuacaodoquiz('pergunta1','3')">
             <span class="textobotao">Neutro</span>
         </button>
-        <button id="4" class="botoes" onclick="mostraSecao('pergunta2')">
-            <span class="textobotao">Discordo <br> Parcialmente</span>
+        <button id="4" class="botoes" onclick="mostraSecao('pergunta2'); pontuacaodoquiz('pergunta1','4')">
+            <span class="textobotao">Discordo  Parcialmente</span>
         </button>
-        <button id="5" class="botoes" onclick="mostraSecao('pergunta2')">
-            <span class="textobotao">Discordo <br> Totalmente</span>
+        <button id="5" class="botoes" onclick="mostraSecao('pergunta2'); pontuacaodoquiz('pergunta1','5')">
+            <span class="textobotao">Discordo  Totalmente</span>
         </button>
     </section>
+
+
+
 
     <section style="margin-top: 200px;" id="pergunta2" class="secaoSumida"> 
-        <header>aaaaaaaaa</header>
-        <button id="1" class="botoes" onclick="mostraSecao('pergunta3')">
-            <span class="textobotao">Opção 1</span>
+        <button id="1" class="botoes" onclick="mostraSecao('pergunta3'); pontuacaodoquiz('pergunta2','1') ">
+            <span class="textobotao">Concordo  Totalmente</span>
         </button>
-        <button id="2" class="botoes" onclick="mostraSecao('pergunta3')">
-            <span class="textobotao">Opção 2</span>
+        <button id="2" class="botoes" onclick="mostraSecao('pergunta3'); pontuacaodoquiz('pergunta2','2')">
+            <span class="textobotao">Concordo  Parcialmente</span>
         </button>
-        <button id="3" class="botoes" onclick="mostraSecao('pergunta3')">
-            <span class="textobotao">Banco <br> de <br>Dados</span>
+        <button id="3" class="botoes" onclick="mostraSecao('pergunta3'); pontuacaodoquiz('pergunta2','3')">
+            <span class="textobotao">Neutro</span>
         </button>
-        <button id="4" class="botoes" onclick="mostraSecao('pergunta3')">
-            <span class="textobotao">Banco <br> de <br>Dados</span>
+        <button id="4" class="botoes" onclick="mostraSecao('pergunta3'); pontuacaodoquiz('pergunta2','4')">
+            <span class="textobotao">Discordo  Parcialmente</span>
         </button>
-        <button id="5" class="botoes" onclick="mostraSecao('pergunta3')">
-            <span class="textobotao">Banco <br> de <br>Dados</span>
+        <button id="5" class="botoes" onclick="mostraSecao('pergunta3'); pontuacaodoquiz('pergunta2','5')">
+            <span class="textobotao">Discordo  Totalmente</span>
         </button>
     </section>
+
+
 
     <section style="margin-top: 200px;" id="pergunta3" class="secaoSumida"> 
-        <button id="1" class="botoes" onclick="mostraSecao('pergunta4')">
-            <span class="textobotao">Concordo <br> Totalmente</span>
+        <button id="1" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','1')">
+            <span class="textobotao">Concordo  Totalmente</span>
         </button>
-        <button id="2" class="botoes" onclick="mostraSecao('pergunta4')">
-            <span class="textobotao">Concordo <br> Parcialmente</span>
+        <button id="2" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','2')">
+            <span class="textobotao">Concordo  Parcialmente</span>
         </button>
-        <button id="3" class="botoes" onclick="mostraSecao('pergunta4')">
+        <button id="3" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','3')">
             <span class="textobotao">Neutro</span>
         </button>
-        <button id="4" class="botoes" onclick="mostraSecao('pergunta4')">
-            <span class="textobotao">Discordo <br> Parcialmente</span>
+        <button id="4" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','4')">
+            <span class="textobotao">Discordo  Parcialmente</span>
         </button>
-        <button id="5" class="botoes" onclick="mostraSecao('pergunta4')">
-            <span class="textobotao">Discordo <br> Totalmente</span>
+        <button id="5" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','5')">
+            <span class="textobotao">Discordo  Totalmente</span>
         </button>
     </section>
+    
+
 
     <section style="margin-top: 200px;" id="pergunta4" class="secaoSumida"> 
-         <button id="1" class="botoes" onclick="mostraSecao('pergunta5')">
-            <span class="textobotao">Concordo <br> Totalmente</span>
+         <button id="1" class="botoes" onclick="mostraSecao('pergunta5'); pontuacaodoquiz('pergunta4','1')">
+            <span class="textobotao">Concordo  Totalmente</span>
         </button>
-        <button id="2" class="botoes" onclick="mostraSecao('pergunta5')">
-            <span class="textobotao">Concordo <br> Parcialmente</span>
+        <button id="2" class="botoes" onclick="mostraSecao('pergunta5'); pontuacaodoquiz('pergunta4','2')">
+            <span class="textobotao">Concordo  Parcialmente</span>
         </button>
-        <button id="3" class="botoes" onclick="mostraSecao('pergunta5')">
+        <button id="3" class="botoes" onclick="mostraSecao('pergunta5'); pontuacaodoquiz('pergunta4','3')">
             <span class="textobotao">Neutro</span>
         </button>
-        <button id="4" class="botoes" onclick="mostraSecao('pergunta5')">
-            <span class="textobotao">Discordo <br> Parcialmente</span>
+        <button id="4" class="botoes" onclick="mostraSecao('pergunta5'); pontuacaodoquiz('pergunta4','4')">
+            <span class="textobotao">Discordo  Parcialmente</span>
         </button>
-        <button id="5" class="botoes" onclick="mostraSecao('pergunta5')">
-            <span class="textobotao">Discordo <br> Totalmente</span>
+        <button id="5" class="botoes" onclick="mostraSecao('pergunta5'); pontuacaodoquiz('pergunta4','5')">
+            <span class="textobotao">Discordo  Totalmente</span>
         </button>
     </section>
 
-    <section style="margin-top: 200px;" id="pergunta5" class="secaoSumida"> 
 
+
+    <section style="margin-top: 200px;" id="pergunta5" class="secaoSumida"> 
+         <button id="1" class="botoes" onclick="mostraSecao('pergunta6'); pontuacaodoquiz('pergunta5','1')">
+            <span class="textobotao">Concordo  Totalmente</span>
+        </button>
+        <button id="2" class="botoes" onclick="mostraSecao('pergunta6'); pontuacaodoquiz('pergunta5','2')">
+            <span class="textobotao">Concordo  Parcialmente</span>
+        </button>
+        <button id="3" class="botoes" onclick="mostraSecao('pergunta6'); pontuacaodoquiz('pergunta5','3')">
+            <span class="textobotao">Neutro</span>
+        </button>
+        <button id="4" class="botoes" onclick="mostraSecao('pergunta6'); pontuacaodoquiz('pergunta5','4')">
+            <span class="textobotao">Discordo  Parcialmente</span>
+        </button>
+        <button id="5" class="botoes" onclick="mostraSecao('pergunta6'); pontuacaodoquiz('pergunta5','5')">
+            <span class="textobotao">Discordo  Totalmente</span>
+        </button>
     </section>
 </main>
 

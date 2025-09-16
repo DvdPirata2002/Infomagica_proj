@@ -56,6 +56,61 @@ function buscar() {
 }
 
 
+
+
+
+function buscar2() {
+    let input = document.getElementById('searchInput2').value.toLowerCase();
+    let secoes = document.getElementsByClassName('secaoSumida');
+    let primeiroEncontrado = null; 
+
+    document.querySelectorAll('.topico').forEach(topico => {
+        topico.classList.remove('ativo');
+    });
+
+    for (let i = 0; i < secoes.length; i++) {
+        let pesquisas = secoes[i].getElementsByClassName('pesquisa');
+        let encontrou = false;
+        let topicoParaAbrir = null;
+
+        for (let j = 0; j < pesquisas.length; j++) {
+            let texto = pesquisas[j].textContent.toLowerCase();
+            if (texto.includes(input)) {
+                encontrou = true; 
+                topicoParaAbrir = pesquisas[j].closest('.topico');
+                encontrou = true;
+                if (!primeiroEncontrado) {
+                    primeiroEncontrado = pesquisas[j];
+                }
+            }
+        }
+        if (input === "") {
+            secoes[i].classList.remove('selecionada');
+        } else if (encontrou) {
+            secoes[i].classList.add('selecionada');
+            if (!primeiroEncontrado) {
+                primeiroEncontrado = secoes[i];
+            }
+            if (topicoParaAbrir) {
+                topicoParaAbrir.classList.add('ativo');
+                setTimeout(function() {
+                    topicoParaAbrir.scrollIntoView({ behavior: "smooth", block: "center" });
+                }, 50);
+            }
+        } else {
+            secoes[i].classList.remove('selecionada');
+        }
+    }
+
+    if (primeiroEncontrado) {
+       setTimeout(function() {
+        primeiroEncontrado.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 50); 
+    }
+}
+
+
+
 // Verifica o estado do modo escuro ao carregar a página
 
 window.onload = function() {
@@ -137,6 +192,7 @@ drk.addEventListener('click', function(){
     // qual seçao aparece
 function mostraSecao(sId) {
     document.getElementById('searchInput').value = "";
+    document.getElementById('searchInput2').value = "";
     document.querySelectorAll('.secaoSumida').forEach(sec => sec.classList.remove('selecionada'));
     document.getElementById(sId).classList.add('selecionada');
     document.querySelectorAll('.topico').forEach(topico => topico.classList.remove('ativo'));
@@ -158,5 +214,132 @@ function mostraSecao(sId) {
 
 //-------------------------PARTE DO QUIZ------------------------------
 
+function pontuacaodoquiz(pid, rid) {
 
+    java = 0;
+    python = 0;
+    javascript = 0;
+    c = 0;
+
+ switch (pid) {
+
+
+
+        case "pergunta1":
+            switch (rid) {
+                case "1":
+alert("clicou no 1 da pergunta 1");
+                    break;
+                case "2":
+alert("clicou no 2 da pergunta 1");
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    break;
+
+
+                case "5":
+                    break;
+            }
+            break;
+
+
+
+        case "pergunta2":
+            switch (rid) {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    break;
+
+
+                case "5":
+                    break;
+            }
+            break;
+
+
+
+
+        case "pergunta3":
+            switch (rid) {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    break;
+
+
+                case "5":
+                    break;
+            }
+            break;
+
+
+
+
+        case "pergunta4":
+            switch (rid) {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    break;
+
+
+                case "5":
+                    break;
+            }
+            break;
+
+
+
+
+        case "pergunta5":
+            switch (rid) {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    break;
+
+
+                case "5":
+                    break;
+            }
+            break;
+    }
+}
 
