@@ -269,27 +269,159 @@ function pontuacaodoquiz(pid, rid) {
         case "pergunta3":
                switch (rid) {
                 case "1":
-                    alert("clicou no 1 da pergunta 1");
-                    java++;
+                    python=python + 2; java=java + 2;
                     break;
                 case "2":
-                    alert("clicou no 2 da pergunta 1");
-                    python++;
+                    python++; kotlin=kotlin + 2; java++; javascript++; 
                     break;
                 case "3":
-                    alert("clicou no 3 da pergunta 1");
-                    javascript++;
+                    kotlin++; javascript=javascript + 2;
                     break;
                 case "4":
-                    alert("clicou no 4 da pergunta 1");
                     c++;
                     break;
                 case "5":
-                    alert("clicou no 5 da pergunta 1");
-                    html++;
+                    c=c + 2;
                     break;
             }
+            break;
+        case "pergunta4":
+                        switch (rid) {
+                case "1":
+                     java=java + 2;
+                    break;
+                case "2":
+                      java++; 
+                    break;
+                case "3":
+                    c=c + 2;  python++;
+                    break;
+                case "4":
+                    python=python + 2; kotlin++; javascript++;
+                    break;
+                case "5":
+                   kotlin=kotlin + 2;javascript=javascript + 2; 
+                    break;
+            }
+            break;
+        case "pergunta5":
+                        switch (rid) {
+                case "1":
+                  javascript=javascript + 2; python=python + 2;
+                            kotlin++; 
+                    break;
+                case "2":
+                    python++; kotlin=kotlin + 2; javascript++;
+                    break;
+                case "3":
+                           java=java + 2;  
+                    break;
+                case "4":
+                    java++;
+                    break;
+                case "5":
+                    c=c + 2;
+                    break;
+            }
+            break;
+        case "pergunta6":
+                        switch (rid) {
+                case "1":
+                   python=python + 2; c=c + 2;
+                    break;
+                case "2":
+                    python++; 
+                   
+                    break;
+                case "3":
+                    kotlin++; javascript=javascript + 2;
+                    break;
+                case "4":
+                    c++;
+                    break;
+                case "5":
+                   javascript=javascript + 2;
 
+                    break;
+            }
+            break;
+        case "pergunta7":
+                        switch (rid) {
+                case "1":
+                    python=python + 2; java=java + 2;
+                    break;
+                case "2":
+                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                    break;
+                case "3":
+                    kotlin++; javascript=javascript + 2;
+                    break;
+                case "4":
+                    c++;
+                    break;
+                case "5":
+                    c=c + 2;
+                    break;
+            }
+            break;
+
+            case "pergunta8":
+                            switch (rid) {
+                case "1":
+                    python=python + 2; java=java + 2;
+                    break;
+                case "2":
+                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                    break;
+                case "3":
+                    kotlin++; javascript=javascript + 2;
+                    break;
+                case "4":
+                    c++;
+                    break;
+                case "5":
+                    c=c + 2;
+                    break;
+            }
+            break;
+            case "pergunta9":
+                            switch (rid) {
+                case "1":
+                    python=python + 2; java=java + 2;
+                    break;
+                case "2":
+                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                    break;
+                case "3":
+                    kotlin++; javascript=javascript + 2;
+                    break;
+                case "4":
+                    c++;
+                    break;
+                case "5":
+                    c=c + 2;
+                    break;
+            }
+            break;
+            case "pergunta10":
+                            switch (rid) {
+                case "1":
+                    python=python + 2; java=java + 2;
+                    break;
+                case "2":
+                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                    break;
+                case "3":
+                    kotlin++; javascript=javascript + 2;
+                    break;
+                case "4":
+                    c++;
+                    break;
+                case "5":
+                    c=c + 2;
+                    break;
+            }
+            break;
 
     }
 }
