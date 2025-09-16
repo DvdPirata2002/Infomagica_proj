@@ -220,6 +220,8 @@ function pontuacaodoquiz(pid, rid) {
     python = 0;
     javascript = 0;
     c = 0;
+    html = 0;
+    css = 0;
 
  switch (pid) {
 
