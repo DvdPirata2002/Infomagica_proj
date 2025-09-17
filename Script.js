@@ -248,13 +248,17 @@ function mostraSecao(sId) {
 
 
 //-------------------------PARTE DO QUIZ------------------------------
-let java = 0;
-let python = 0;
-let javascript = 0;
-let kotlin = 0;
-let c = 0;
+
 
 function pontuacaodoquiz(pid, rid) {
+
+let java = parseInt(document.getElementById("javae").value,10);
+let python = parseInt(document.getElementById("pythone").value,10);
+let javascript = parseInt(document.getElementById("jse").value,10);
+let kotlin = parseInt(document.getElementById("kotline").value,10);
+let c = parseInt(document.getElementById("ce").value,10);
+
+
     switch (pid) {
         case "pergunta1":
             switch (rid) {
@@ -276,6 +280,12 @@ function pontuacaodoquiz(pid, rid) {
                     kotlin=kotlin + 2;
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
+
             break;
         case "pergunta2":
              switch (rid) {
@@ -286,7 +296,8 @@ function pontuacaodoquiz(pid, rid) {
                     java++;
                     break;
                 case "3":
-                    java=java + 2; kotlin++;
+                java=java + 2; kotlin++;
+          
                     break;
                 case "4":
                     kotlin=kotlin + 2; python=python + 2;
@@ -295,17 +306,24 @@ function pontuacaodoquiz(pid, rid) {
                     c=c + 2; python++;
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
         case "pergunta3":
                switch (rid) {
                 case "1":
                     python=python + 2; java=java + 2;
+                    
                     break;
                 case "2":
                     python++; kotlin=kotlin + 2; java++; javascript++; 
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+            
+                kotlin++; javascript=javascript + 2;
                     break;
                 case "4":
                     c++;
@@ -314,6 +332,12 @@ function pontuacaodoquiz(pid, rid) {
                     c=c + 2;
                     break;
             }
+
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
         case "pergunta4":
                         switch (rid) {
@@ -324,6 +348,7 @@ function pontuacaodoquiz(pid, rid) {
                       java++; 
                     break;
                 case "3":
+                 
                     c=c + 2;  python++;
                     break;
                 case "4":
@@ -333,6 +358,11 @@ function pontuacaodoquiz(pid, rid) {
                    kotlin=kotlin + 2;javascript=javascript + 2; 
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
         case "pergunta5":
                         switch (rid) {
@@ -344,6 +374,7 @@ function pontuacaodoquiz(pid, rid) {
                     python++; kotlin=kotlin + 2; javascript++;
                     break;
                 case "3":
+                    
                            java=java + 2;  
                     break;
                 case "4":
@@ -353,6 +384,11 @@ function pontuacaodoquiz(pid, rid) {
                     c=c + 2;
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
         case "pergunta6":
                         switch (rid) {
@@ -364,6 +400,7 @@ function pontuacaodoquiz(pid, rid) {
                    
                     break;
                 case "3":
+
                     kotlin++; java++;
                     break;
                 case "4":
@@ -375,6 +412,12 @@ function pontuacaodoquiz(pid, rid) {
 
                     break;
             }
+
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
         case "pergunta7":
                         switch (rid) {
@@ -385,6 +428,7 @@ function pontuacaodoquiz(pid, rid) {
                    javascript++; java++; python++;
                     break;
                 case "3":
+
                  javascript=javascript + 2; c=c + 2;
                     break;
                 case "4":
@@ -394,6 +438,11 @@ function pontuacaodoquiz(pid, rid) {
                  
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
 
             case "pergunta8":
@@ -414,6 +463,11 @@ function pontuacaodoquiz(pid, rid) {
                     c=c + 2;
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
             case "pergunta9":
                             switch (rid) {
@@ -431,52 +485,66 @@ function pontuacaodoquiz(pid, rid) {
                     break;
                 case "5":
                     java=java + 2;
+            
                     break;
             }
+            document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
             break;
             case "pergunta10":
                             switch (rid) {
                 case "1":
                     javascript=javascript+2; java=java + 2;
                     
-
                      break;
                 case "2":
-                  java++; javascript++;  
-   
+                  java++; javascript++; 
+ 
                     break;
-                case "3":
-                  c=c + 2; python++;
-    
-                    break;
+                case "3":     
+                c=c + 2; python++
+break
+                                
                 case "4":
                     python=python + 2; kotlin++;
 
                     break;
                 case "5":
-                     kotlin=kotlin + 2;
-     
+                     kotlin=kotlin + 2
+
+                
                     break;
-            }
+            }document.getElementById("javae").value = java;
+            document.getElementById("pythone").value = python;
+            document.getElementById("jse").value = javascript;
+            document.getElementById("kotline").value = kotlin;
+            document.getElementById("ce").value = c;
+            resulta();
        
             break;
 
     }
 }
 function resulta() {
+
+    let java = parseInt(document.getElementById("javae").value,10);
+let python = parseInt(document.getElementById("pythone").value,10);
+let javascript = parseInt(document.getElementById("jse").value,10);
+let kotlin = parseInt(document.getElementById("kotline").value,10);
+let c = parseInt(document.getElementById("ce").value,10);
+
+
     const scores = { java, python, javascript, kotlin, c };
 
-    // descobre a linguagem com maior pontuação
     const topLanguage = Object.keys(scores).reduce((a, b) =>
         scores[a] > scores[b] ? a : b
     );
-
-    // esconde TODAS as seções
     document.querySelectorAll('.secaoSumida').forEach(sec =>
         sec.classList.remove('selecionada')
     );
-
-    // mostra apenas a linguagem vencedora
     const resultadoFinal = document.getElementById(topLanguage);
     if (resultadoFinal) {
         resultadoFinal.classList.add('selecionada');
