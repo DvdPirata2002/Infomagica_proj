@@ -230,7 +230,7 @@ function pontuacaodoquiz(pid, rid) {
             switch (rid) {
                 case "1":
                     java=java + 2;
-                    C = C + 3;
+                    c = c + 3;
                     break;
                 case "2":
                     javascript++;java++;
@@ -330,14 +330,15 @@ function pontuacaodoquiz(pid, rid) {
                    python=python + 2; c=c + 2;
                     break;
                 case "2":
-                    python++; 
+                    python++; c++;
                    
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+                    kotlin++; java++;
                     break;
                 case "4":
-                    c++;
+                    kotlin=kotlin + 2; java=java + 2;
+                    javascript++;
                     break;
                 case "5":
                    javascript=javascript + 2;
@@ -348,19 +349,19 @@ function pontuacaodoquiz(pid, rid) {
         case "pergunta7":
                         switch (rid) {
                 case "1":
-                    python=python + 2; java=java + 2;
+                    java=java + 2; python=python + 2;
                     break;
                 case "2":
-                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                   javascript++; java++; python++;
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+                 javascript=javascript + 2; c=c + 2;
                     break;
                 case "4":
-                    c++;
+                 c++;
                     break;
                 case "5":
-                    c=c + 2;
+                 
                     break;
             }
             break;
@@ -368,16 +369,16 @@ function pontuacaodoquiz(pid, rid) {
             case "pergunta8":
                             switch (rid) {
                 case "1":
-                    python=python + 2; java=java + 2;
+                            javascript=javascript + 2; kotlin=kotlin + 2;
                     break;
                 case "2":
-                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                     javascript++; kotlin++; 
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+                    python=python + 2;java++; 
                     break;
                 case "4":
-                    c++;
+                    java=java + 2;
                     break;
                 case "5":
                     c=c + 2;
@@ -387,41 +388,75 @@ function pontuacaodoquiz(pid, rid) {
             case "pergunta9":
                             switch (rid) {
                 case "1":
-                    python=python + 2; java=java + 2;
+                    javascript=javascript + 2; 
                     break;
                 case "2":
-                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                     kotlin=kotlin + 2; 
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+                 python++; kotlin++;c=c + 2;
                     break;
                 case "4":
-                    c++;
+                    python=python + 2; c++; java++;
                     break;
                 case "5":
-                    c=c + 2;
+                    java=java + 2;
                     break;
             }
             break;
             case "pergunta10":
                             switch (rid) {
                 case "1":
-                    python=python + 2; java=java + 2;
-                    break;
+                    javascript=javascript+2; java=java + 2;
+                    
+
+                     break;
                 case "2":
-                    python++; kotlin=kotlin + 2; java++; javascript++; 
+                  java++; javascript++;  
+   
                     break;
                 case "3":
-                    kotlin++; javascript=javascript + 2;
+                  c=c + 2; python++;
+    
                     break;
                 case "4":
-                    c++;
+                    python=python + 2; kotlin++;
+
                     break;
                 case "5":
-                    c=c + 2;
+                     kotlin=kotlin + 2;
+     
                     break;
             }
+       
             break;
 
     }
 }
+function resulta() {
+    const scores = { java, python, javascript, kotlin, c };
+
+    // descobre a linguagem com maior pontuação
+    const topLanguage = Object.keys(scores).reduce((a, b) =>
+        scores[a] > scores[b] ? a : b
+    );
+
+    // esconde TODAS as seções
+    document.querySelectorAll('.secaoSumida').forEach(sec =>
+        sec.classList.remove('selecionada')
+    );
+
+    // mostra apenas a linguagem vencedora
+    const resultadoFinal = document.getElementById(topLanguage);
+    if (resultadoFinal) {
+        resultadoFinal.classList.add('selecionada');
+    } else {
+        alert("Nenhum resultado encontrado!");
+    }
+}
+
+
+
+
+
+//-------------------------FIM DA PARTE DO QUIZ------------------------------

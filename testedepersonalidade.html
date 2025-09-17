@@ -108,7 +108,7 @@
 
     <section style="margin-top: 200px;" id="pergunta3" class="secaoSumida"> 
       <h1>
-        o quanto voce gosta de reconhecimento por um trabalho bem feito?
+        voce gosta de reconhecimento por um trabalho bem feito
     </h1>
         <button id="1" class="botoes" onclick="mostraSecao('pergunta4'); pontuacaodoquiz('pergunta3','1')">
             <span class="textobotao">Concordo  Totalmente</span>
@@ -201,7 +201,12 @@
 
 
         <section style="margin-top: 200px;" id="pergunta7" class="secaoSumida"> 
-         <button id="1" class="botoes" onclick="mostraSecao('pergunta8'); pontuacaodoquiz('pergunta7','1')">
+        
+            <h1>
+               voce se considera uma pessoa mais logica do que emocional
+                </h1>
+        
+            <button id="1" class="botoes" onclick="mostraSecao('pergunta8'); pontuacaodoquiz('pergunta7','1')">
             <span class="textobotao">Concordo  Totalmente</span>
         </button>
         <button id="2" class="botoes" onclick="mostraSecao('pergunta8'); pontuacaodoquiz('pergunta7','2')">
@@ -219,7 +224,11 @@
     </section>
 
     <section style="margin-top: 200px;" id="pergunta8" class="secaoSumida"> 
-         <button id="1" class="botoes" onclick="mostraSecao('pergunta9'); pontuacaodoquiz('pergunta8','1')">
+      <h1>
+        voce se considera uma pessoa criativa
+        </h1>
+      
+        <button id="1" class="botoes" onclick="mostraSecao('pergunta9'); pontuacaodoquiz('pergunta8','1')">
             <span class="textobotao">Concordo  Totalmente</span>
         </button>
         <button id="2" class="botoes" onclick="mostraSecao('pergunta9'); pontuacaodoquiz('pergunta8','2')">
@@ -237,7 +246,11 @@
     </section>
 
     <section style="margin-top: 200px;" id="pergunta9" class="secaoSumida"> 
-         <button id="1" class="botoes" onclick="mostraSecao('pergunta10'); pontuacaodoquiz('pergunta9','1')">
+             <h1>
+                voce permanece calmo mesmo em situacoes de estresse
+        </h1>
+       
+        <button id="1" class="botoes" onclick="mostraSecao('pergunta10'); pontuacaodoquiz('pergunta9','1')">
             <span class="textobotao">Concordo  Totalmente</span>
         </button>
         <button id="2" class="botoes" onclick="mostraSecao('pergunta10'); pontuacaodoquiz('pergunta9','2')">
@@ -255,24 +268,71 @@
     </section>
 
     <section style="margin-top: 200px;" id="pergunta10" class="secaoSumida"> 
-         <button id="1" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','1')">
+              <h1>
+                voce frequentemente se vê perdido em pensamentos
+        </h1>
+        
+        <button id="1" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','1');">
             <span class="textobotao">Concordo  Totalmente</span>
         </button>
-        <button id="2" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','2')">
+        <button id="2" class="botoes" onclick="mostraSecao('resultado');pontuacaodoquiz('pergunta10','2'); ">
             <span class="textobotao">Concordo  Parcialmente</span>
         </button>
-        <button id="3" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','3')">
+        <button id="3" class="botoes" onclick="mostraSecao('resultado');pontuacaodoquiz('pergunta10','3'); ">
             <span class="textobotao">Neutro</span>
         </button>
-        <button id="4" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','4')">
+        <button id="4" class="botoes" onclick="mostraSecao('resultado');pontuacaodoquiz('pergunta10','4'); ">
             <span class="textobotao">Discordo  Parcialmente</span>
         </button>
-        <button id="5" class="botoes" onclick="mostraSecao('resultado'); pontuacaodoquiz('pergunta10','5')">
+        <button id="5" class="botoes" onclick="mostraSecao('resultado');pontuacaodoquiz('pergunta10','5'); ">
             <span class="textobotao">Discordo  Totalmente</span>
         </button>
     </section>
 
     
+    <section style="margin-top: 200px;" id="resultado" class="secaoSumida"> 
+   
+  <button class="botoes" onclick="resulta();">
+            <span class="textobotao">resultado</span>
+        </button>
+    </section>
+
+    <section style="margin-top: 200px;" id="java" class="secaoSumida"> 
+    <h1>
+        java
+    </h1>
+</section>
+
+
+        <section style="margin-top: 200px;" id="python" class="secaoSumida"> 
+        <h1>
+    python
+        </h1>
+    </section>
+
+
+        <section style="margin-top: 200px;" id="c" class="secaoSumida"> 
+        <h1>
+    c++
+        </h1>
+    </section>
+
+
+        <section style="margin-top: 200px;" id="javascript" class="secaoSumida"> 
+        <h1>
+    javascript
+        </h1>
+    </section>
+
+
+        <section style="margin-top: 200px;" id="kotlin" class="secaoSumida"> 
+        <h1>
+    kotlin
+        </h1>
+    </section>
+
+
+
 
 
 </main>
@@ -287,6 +347,8 @@
 
     </p>
     </footer>
+
+
 
 
 <script type="text/javascript" src="Script.js"></script>
