@@ -275,6 +275,7 @@ let c = parseInt(document.getElementById("ce").value,10);
                     break;
                 case "4":
                     python=python + 2;
+                    kotlin++;
                     break;
                 case "5":
                     kotlin=kotlin + 2;
@@ -429,10 +430,10 @@ let c = parseInt(document.getElementById("ce").value,10);
                     break;
                 case "3":
 
-                 javascript=javascript + 2; c=c + 2;
+                 javascript=javascript + 2; c=c + 2; kotlin++;
                     break;
                 case "4":
-                 c++;
+                 c++; kotlin=kotlin + 2;
                     break;
                 case "5":
                  
