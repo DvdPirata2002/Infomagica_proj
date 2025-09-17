@@ -4,6 +4,36 @@ var menu = document.querySelector('.menu')
 var body = document.body;
 var drk = document.getElementById('drkToggle')
 
+// carousel
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide-js');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+    });
+}
+
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    showSlide(currentSlide);
+}
+
+// Inicializa o carrossel na página
+showSlide(currentSlide);
+
 // função de busca/pesquisa
 function buscar() {
     let input = document.getElementById('searchInput').value.toLowerCase();
