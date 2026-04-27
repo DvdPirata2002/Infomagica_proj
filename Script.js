@@ -34,7 +34,7 @@ function prevSlide() {
 // Inicializa o carrossel na página
 showSlide(currentSlide);
 
-// função de busca/pesquisa
+// função que faz a busca/pesquisa
 function buscar() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let secoes = document.getElementsByClassName('secaoSumida');
